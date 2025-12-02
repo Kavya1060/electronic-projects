@@ -42,7 +42,7 @@ void loop() {
   Serial.println(distance);
 
   if (distance < 50) {
-    sendTelegramMessage("⚠️ Object detected! Distance: " + String(distance) + " cm");
+    sendTelegramMessage(" Object detected! Distance: " + String(distance) + " cm");
     delay(2000);
   }
   delay(500);
