@@ -1,14 +1,14 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid ="1";         // replace with your Wi-Fi SSID
-const char* password ="11111111"; // replace with your Wi-Fi password
+const char* ssid ="1";         
+const char* password ="11111111"; 
 
-const char* botToken = "8597828149:AAF7LXJvjFAoBRQc9jO-QiKkm7rHDqmS_M4";     // replace with your Telegram bot token
-const char* chatID = "7863531839";           // your chat ID
+const char* botToken = "8597828149:AAF7LXJvjFAoBRQc9jO-QiKkm7rHDqmS_M4";     
+const char* chatID = "7863531839";          
 
-const int trigPin = 5;  // Ultrasonic trig pin
-const int echoPin = 18; // Ultrasonic echo pin
+const int trigPin = 5;  
+const int echoPin = 18; 
 
 long duration;
 int distance;
@@ -28,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  // Measure distance
+ 
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -41,9 +41,9 @@ void loop() {
   Serial.print("Distance: ");
   Serial.println(distance);
 
-  if (distance < 50) { // Threshold in cm
+  if (distance < 50) {
     sendTelegramMessage("⚠️ Object detected! Distance: " + String(distance) + " cm");
-    delay(2000); // Wait 5 seconds before sending next message
+    delay(2000);
   }
   delay(500);
 }
