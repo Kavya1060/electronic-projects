@@ -4,7 +4,7 @@
 const char* ssid ="1";         
 const char* password ="11111111"; 
 
-const char* botToken = "8597828149:AAF7LXJvjFAoBRQc9jO-QiKkm7rHDqmS_M4";     
+const char* botToken = "xyz";     
 const char* chatID = "7863531839";          
 
 const int trigPin = 5;  
